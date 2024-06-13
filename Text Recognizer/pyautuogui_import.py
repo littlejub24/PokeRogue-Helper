@@ -1,7 +1,7 @@
 import pyautogui
 
 try:
-    grass = pyautogui.locateOnScreen(r"C:\Users\Zach\Desktop\PokeRouge\PokeRogue-Helper\Text Recognizer\Images\Grass_test.png")
+    grass = pyautogui.locateOnScreen(r"C:\Users\Zach\Desktop\PokeRouge\PokeRogue-Helper\Text Recognizer\Images\Grass_test.png",confidence=0.7)
     print(grass)
 except pyautogui.ImageNotFoundException:
     print("Image not found on the screen.")
