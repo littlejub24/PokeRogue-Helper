@@ -1,0 +1,1 @@
+Location of single type should be: Box(left=810, top=283, width=59, height=47)
