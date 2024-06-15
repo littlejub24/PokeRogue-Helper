@@ -1,0 +1,7 @@
+Location of single type should be: Box(left=810, top=283, width=59, height=47)
+
+
+Top Left:Cursor position: (184, 221)
+Top Right: Cursor position: (1035, 205)
+Bottom Left: Cursor position: (199, 493)
+Bottom right: Cursor position: (924, 546)
