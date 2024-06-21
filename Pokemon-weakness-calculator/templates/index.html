@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokémon Weakness Calculator</title>
+</head>
+<body>
+  <h1>Pokémon Weakness Calculator</h1>
+  <form id="typeForm">
+    <label for="type1">Type 1:</label>
+    <select id="type1" name="type1">
+      {% for type in types %}
+        <option value="{{ type }}">{{ type }}</option>
+      {% endfor %}
+    </select>
+    <label for="type2">Type 2:</label>
+    <select id="type2" name="type2">
+      <option value="">None</option>
+      {% for type in types %}
+        <option value="{{ type }}">{{ type }}</option>
+      {% endfor %}
+    </select>
+    <button type="submit">Calculate</button>
+  </form>
+  <div id="result"></div>
+
+  <script>
+    document.getElementById('typeForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const type1 = document.getElementById('type1').value;
+      const type2 = document.getElementById('type2').value;
+
+      fetch('/calculate', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ types: [type1, type2].filter(t => t) })
+      })
+      .then(response => response.json())
+      .then(data => {
+        const resultDiv = document.getElementById('result');
+        resultDiv.innerHTML = `
+          <p>2x Damage: ${data['2x'].join(', ')}</p>
+          <p>1x Damage: ${data['1x'].join(', ')}</p>
+          <p>0.5x Damage: ${data['0.5x'].join(', ')}</p>
+          <p>0x Damage: ${data['0x'].join(', ')}</p>
+        `;
+      });
+    });
+  </script>
+</body>
+</html>

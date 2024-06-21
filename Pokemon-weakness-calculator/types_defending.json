@@ -1,0 +1,20 @@
+{
+    "normal": {"2x": ["fighting"], "0.5x": [], "0x": ["ghost"]},
+    "fire": {"2x": ["water", "ground", "rock"], "0.5x": ["fire", "grass", "ice", "bug", "steel", "fairy"], "0x": []},
+    "water": {"2x": ["electric", "grass"], "0.5x": ["fire", "water", "ice", "steel"], "0x": []},
+    "electric": {"2x": ["ground"], "0.5x": ["electric", "flying", "steel"], "0x": []},
+    "grass": {"2x": ["fire", "ice", "poison", "flying", "bug"], "0.5x": ["water", "electric", "grass", "ground"], "0x": []},
+    "ice": {"2x": ["fire", "fighting", "rock", "steel"], "0.5x": ["ice"], "0x": []},
+    "fighting": {"2x": ["flying", "psychic", "fairy"], "0.5x": ["bug", "rock", "dark"], "0x": []},
+    "poison": {"2x": ["ground", "psychic"], "0.5x": ["grass", "fighting", "poison", "bug", "fairy"], "0x": []},
+    "ground": {"2x": ["water", "grass", "ice"], "0.5x": ["poison", "rock"], "0x": ["electric"]},
+    "flying": {"2x": ["electric", "ice", "rock"], "0.5x": ["grass", "fighting", "bug"], "0x": ["ground"]},
+    "psychic": {"2x": ["bug", "ghost", "dark"], "0.5x": ["fighting", "psychic"], "0x": []},
+    "bug": {"2x": ["fire", "flying", "rock"], "0.5x": ["grass", "fighting", "ground"], "0x": []},
+    "rock": {"2x": ["water", "grass", "fighting", "ground", "steel"], "0.5x": ["normal", "fire", "poison", "flying"], "0x": []},
+    "ghost": {"2x": ["ghost", "dark"], "0.5x": ["poison", "bug"], "0x": ["normal", "fighting"]},
+    "dragon": {"2x": ["ice", "dragon", "fairy"], "0.5x": ["fire", "water", "electric", "grass"], "0x": []},
+    "dark": {"2x": ["fighting", "bug", "fairy"], "0.5x": ["ghost", "dark", "psychic"], "0x": ["psychic"]},
+    "steel": {"2x": ["fire", "fighting", "ground"], "0.5x": ["normal", "grass", "ice", "flying", "psychic", "bug", "rock", "dragon", "steel", "fairy"], "0x": ["poison"]},
+    "fairy": {"2x": ["poison", "steel"], "0.5x": ["fighting", "bug", "dark"], "0x": ["dragon"]}
+}
